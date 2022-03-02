@@ -3,6 +3,7 @@ const {
     getNote,
     getNotebyId,
     updateNotebyId,
+    deleteNotebyId,
 } = require("./handler.js");
 
 const routes = [{
@@ -24,6 +25,11 @@ const routes = [{
         method: "PUT",
         path: "/notes/{id}",
         handler: updateNotebyId,
+    },
+    {
+        method: "DELETE",
+        path: "/notes/{id}",
+        handler: deleteNotebyId,
     },
 ];
 
